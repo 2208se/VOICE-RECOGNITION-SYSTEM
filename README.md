@@ -9,8 +9,12 @@ Distance-Based Matching: Uses numerical distance (e.g., Euclidean) between MFCC 
 Simple Command-Line Interface: Interactively register new users or identify speakers.
 Folder Structure
 voice-biometrics/
+
+
+
 │
 ├─ users/                  # Stores registered users' audio and MFCC features
+
 │   └─ <username>/         # Each user has a dedicated folder
 │       ├─ voice.wav       # Recorded voice sample
 │       └─ mfcc.npy        # Extracted MFCC features
