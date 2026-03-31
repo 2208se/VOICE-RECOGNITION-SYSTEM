@@ -1,4 +1,3 @@
-
 import pyaudio
 import wave
 import os
@@ -14,9 +13,11 @@ def record_voice(filename, duration=4):
                         rate=RATE, input=True,
                         frames_per_buffer=CHUNK)
 
-    print("🎙️ Recording...")
-    frames = [stream.read(CHUNK) for _ in range(0, int(RATE / CHUNK * duration))]
-    print("✅ Done.")
+    print("Recording...")
+    frames = []
+    for _ in range(int(RATE / CHUNK * duration)):
+        frames.append(stream.read(CHUNK))
+    print("Done.")
 
     stream.stop_stream()
     stream.close()
