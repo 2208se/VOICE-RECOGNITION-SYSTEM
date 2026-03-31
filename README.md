@@ -16,13 +16,21 @@ voice-biometrics/
 ├─ users/                  # Stores registered users' audio and MFCC features
 
 │   └─ <username>/         # Each user has a dedicated folder
+
+
 │       ├─ voice.wav       # Recorded voice sample
+
 │       └─ mfcc.npy        # Extracted MFCC features
+
 │
 ├─ record.py               # Module for recording voice
+
 ├─ features.py             # Module for extracting and saving MFCC features
+
 ├─ compare.py              # Module for comparing MFCC features
+
 └─ main.py                 # Main script with CLI for registration and identification
+
 
 How It Works
 Register a User
